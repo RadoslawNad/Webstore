@@ -20,7 +20,7 @@ public class UnitsInStockValidator implements Validator {
 				&& new BigDecimal(10000).compareTo(product.getUnitPrice()) <= 0
 				&& product.getUnitsInStock() > 99) {
 			errors.rejectValue("unitsInStock",
-					"com.packt.webstore.validator.UnitsInStockValidator.message");
+					"com.webstore.validator.UnitsInStockValidator.message");
 		}
 	}
 }
