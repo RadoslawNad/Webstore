@@ -15,7 +15,6 @@ cartApp.controller('cartCtrl', function ($scope, $http) {
       $scope.refreshCart($scope.cartId);
    };
    $scope.addToCart = function(productId) {
-	   System.out.println(productId+"------------------------------------ddddd------------------------");
       $http.put('/webstore/rest/cart/add/'+productId)
       .success(function(data) {
          $scope.refreshCart($http.get('/webstore/rest/cart/get/cartId'));

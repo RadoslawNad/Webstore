@@ -2,20 +2,16 @@ package com.webstore.domain;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlRootElement;
-
 import org.springframework.web.multipart.MultipartFile;
-
 import com.webstore.validator.Category;
 import com.webstore.validator.ProductId;
 
-@XmlRootElement 
+
 public class Product implements Serializable {
 	
 	private static final long serialVersionUID = 6394317677866202411L;
@@ -43,20 +39,14 @@ public class Product implements Serializable {
 	private MultipartFile productImage;	
 	
 	public Product() {
-	
+		super();
 	}
 
 	public Product(String productId, String name, BigDecimal unitPrice) {
-		this.productId = productId;
-		this.name = name;
-		this.unitPrice = unitPrice;
-	}
-	public Product(String productId, String name, BigDecimal unitPrice, String category) {
 		super();
 		this.productId = productId;
 		this.name = name;
 		this.unitPrice = unitPrice;
-		this.category=category;
 	}
 
 
